@@ -1,0 +1,17 @@
+extends layout
+block content
+
+    h1 #{title} 
+    end
+    |
+    br
+    |
+    if questions  
+        ul
+        each question in questions 
+         a(href="/viewQuestion")
+            li 
+                |Question: #{question.question}  ,   
+                |Answer:  #{question.answer}    ,   
+                |Author:  #{question.author}    ,   
+                |Time Created:  #{question.createdAt} 

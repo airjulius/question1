@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1= title
+     
+    br
+    a(href='/') Home
+    br
+    
+    end
+
+    form(name="add-estimation", method="post")
+            div.input
+                span.label Question
+                input(type="text", name="question", required)
+            div.input
+                span.label Answer
+                textarea(name="answer", cols="80", rows="20" required)
+            div.input
+                span.label Author
+                input(type="text", name="author", required)
+            div.actions
+                input(type="submit", value="add")
